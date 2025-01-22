@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.messages{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25vw;
+  padding-top: 30px;
+  max-height: 75vh; 
+  overflow: hidden;
+}
+
+.messages .userMsg{
+  clear: both;
+  background-color: #181818;
+  padding: 15px;
+  border-radius: 30px;
+  max-width: 60vw;
+  align-self: flex-end;
+  min-width: 20vw;
+}
+
+.messages .responseMsg{
+  clear: both;
+  background-color: #181818;
+  padding: 15px;
+  border-radius: 30px;
+  max-width: 60vw;
+  align-self: flex-start;
+  min-width: 20vw;
+  margin-top: 15px;
+}
+/* General styles for all screen sizes */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0e0e0e;
+  color: white;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #181818;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #201f1f;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 600px;
+  padding: 7px;
+  background-color: #181818;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .messages {
+    padding: 10px;
+  }
+
+  .middle h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+    padding: 8px;
+    height: 15vh;
+  }
+  .card p{
+    font-size: 2vw;
+  }
+
+  .inputBox {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .middle h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 8px;
+    height: 15vh;
+  }
+  .card p{
+    font-size: 2.2vw;
+  }
+
+  .inputBox {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .bottom p {
+    font-size: 12px;
+  }
+}
