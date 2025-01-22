@@ -17,7 +17,10 @@ console.log(_dirname);
 
 
 dotenv.config();
-app.use(cors());
+app.use(cors({
+    origin: "https://geminiai-1-wzve.onrender.com",
+    credentials: true,
+}))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -25,12 +28,12 @@ app.use(cookieParser());
 app.use("/user", userRoutes);
 
 app.use(express.static(path.join(_dirname, "/frontend/dist")));
-app.get("*" , (req , res) => {
+app.get("*", (req, res) => {
     res.sendFile(path.join(_dirname, "/frontend/dist", "index.html"));
 })
 
 connectDB();
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${port}`);
 });
