@@ -19,7 +19,7 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/user/register", {
+            const response = await axios.post("https://assistme-5nz4.onrender.com/user/register", {
                 username,
                 email,
                 password,
