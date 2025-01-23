@@ -9,7 +9,7 @@ function Login() {
   const token = localStorage.getItem("token");
 
   const axiosInstance = axios.create({
-    baseURL: "https://geminiai-1-wzve.onrender.com/user",
+    baseURL: "http://localhost:5000/user",
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -19,6 +19,7 @@ function Login() {
     if (token) {
       navigate("/");
     }
+    
   }, []);
 
   const handleLogin = async (e) => {

@@ -19,7 +19,7 @@ function Register() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://geminiai-1-wzve.onrender.com/user/register", {
+            const response = await axios.post("http://localhost:5000/user/register", {
                 username,
                 email,
                 password,
@@ -91,7 +91,7 @@ function Register() {
                         to="/login"
                         className="text-white hover:underline transition duration-300"
                     >
-                        Register
+                        Login
                     </Link>
                 </p>
             </div>

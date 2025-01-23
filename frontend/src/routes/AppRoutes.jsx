@@ -7,6 +7,7 @@ import Logout from '../pages/Logout'
 import NotFound from '../pages/NotFound'
 
 function AppRoutes() {
+
   return (
     <BrowserRouter>
       <Routes>

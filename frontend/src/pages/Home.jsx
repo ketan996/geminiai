@@ -33,6 +33,8 @@ const Home = () => {
     
     setIsLoading(true);  // Set loading to true when fetching data
 
+    
+
     const genAI = new GoogleGenerativeAI("AIzaSyDj8WaJmEfl8SgxGoMScA7dqGrDJ_wSsQg");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(msg);

@@ -6,6 +6,7 @@ if (!JWT_SECRET) {
     process.exit(1);
 }
 
+
 const isAuthenticated = (req, res, next) => {
     const token = req.cookies.token || req.headers.authorization;
 
